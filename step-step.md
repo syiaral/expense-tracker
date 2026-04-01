@@ -6,3 +6,5 @@ Buat struktur folder, push ke GitHub, deploy kosong ke Vercel. Tujuannya: projec
 
 Hari 2 — Layout & navigasi
 Buat halaman: Dashboard, Transaksi, Login. Belum perlu data nyata, pakai data dummy dulu.
+
+Hari 3 — sekarang kita buat form input transaksi yang berfungsi. Data disimpan ke React state dulu, belum ke database.

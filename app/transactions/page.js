@@ -21,7 +21,7 @@ export default function Transactions() {
       </h1>
       <div className="flex flex-col gap-6">
         <FormTransaction onTambah={TambahTransactions} />
-        <ListTransaksi transactions={transactions} onHapus={HapusTransactions} />
+        <ListTransaksi transactions={transactions} onDelete={HapusTransactions} />
       </div>
     </main>
   );
