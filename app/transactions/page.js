@@ -1,19 +1,28 @@
+"use client";
+
+import { useState } from "react";
+import FormTransaction from "@/components/FormTransaction";
+import ListTransaksi from "@/components/ListTransaksi";
+
 export default function Transactions() {
+  const [transactions, setTransactions] = useState([]);
+
+  function TambahTransactions(data) {
+    setTransactions([data, ...transactions]);
+  }
+
+  function HapusTransactions(id) {
+    setTransactions(transactions.filter((item) => item.id !== id));
+  }
   return (
     <main className="p-6 max-w-4xl mx-auto">
-      <div className="flex items-center justify-between mb-6">
-        <h1 className="text-2xl font-semibold text-gray-800">Transactions</h1>
-        <button className="bg-black text-white mx-6 px-4 py-2 rounded-lg text-sm hover:bg-gray-800 transition-colors">
-          + Tambah Transaksi
-        </button>
-      </div>
-      <div className="bg-white border border-gray-200 rounded-xl p-4">
-        <p className="text-gray-400 text-sm text-center py-8">
-          Belum ada transaksi
-        </p>
-
+      <h1 className="text-2xl font-semibold text-gray-800 mb-6">
+        Transactions
+      </h1>
+      <div className="flex flex-col gap-6">
+        <FormTransaction onTambah={TambahTransactions} />
+        <ListTransaksi transaksi={transaksi} onHapus={hapusTransaksi} />
       </div>
     </main>
   );
 }
-
