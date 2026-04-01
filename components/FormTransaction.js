@@ -93,7 +93,7 @@ export default function FormTransaction({ onTambah }) {
       </div>
       <div className="grid grid-col2 gap 4">
         <div>
-          <label for="" className="text-sm text-gray-600 mb-1 block">
+          <label className="text-sm text-gray-600 mb-1 block">
             Nominal (Rp)
           </label>
           <input
@@ -107,7 +107,7 @@ export default function FormTransaction({ onTambah }) {
           />
         </div>
         <div>
-          <label for="" className="text-sm text-gray-600 mb-1 block">
+          <label className="text-sm text-gray-600 mb-1 block">
             Tanggal
           </label>
           <input
